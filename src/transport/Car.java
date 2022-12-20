@@ -1,14 +1,18 @@
 package transport;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
 public class Car {
 
-   private String brand;
+    private String brand;
     private String model;
     private double engineVolume;
-     private String color;
+    private String color;
     private int year;
     private String country;
-   private String transmission;
+    private String transmission;
     private String bodyType;
     private String registrationNumber;
     private String numberOfSeats;
@@ -175,4 +179,71 @@ public class Car {
     public String toString() {
         return getBrand() + " " + getModel() + " " + getYear() + " " + getCountry()+ " " + getColor()+ " " + getEngineVolume()+ " " + getTransmission()+ " " + getBodyType()+ " " + getRegistrationNumber()+ " " + getNumberOfSeats()+ " " + getCarTyre();
     }
+    public static class Key {
+      private String remoteEngineStart;
+      private String keylessAccess;
+
+        public Key(String remoteEngineStart, String keylessAccess) {
+            this.remoteEngineStart = remoteEngineStart;
+            this.keylessAccess = keylessAccess;
+        }
+
+        public String getRemoteEngineStart() {
+            return remoteEngineStart;
+        }
+
+        public void setRemoteEngineStart(String remoteEngineStart) {
+            this.remoteEngineStart = remoteEngineStart;
+            if ( this.remoteEngineStart == null||remoteEngineStart.isEmpty())
+            { this.remoteEngineStart = "default";
+            }
+
+
+        }
+
+        public String getKeylessAccess() {
+            return keylessAccess;
+        }
+
+        public void setKeylessAccess(String keylessAccess) {
+            this.keylessAccess = keylessAccess;
+            if ( this.keylessAccess == null||keylessAccess.isEmpty())
+            { this.keylessAccess = "default";
+            }
+        }
+    }
+    public static class Insurance {
+        // не понимаю как создать проверку для final так как даже через Alt Ins не дает выбора сетера,только гетер...
+        private final int insuranceCost;
+        private final int insuranceNumber;
+
+
+
+        public Insurance(int insuranceCost, int insuranceNumber) {
+            this.insuranceCost = insuranceCost;
+            this.insuranceNumber = insuranceNumber;
+        }
+
+        public int getInsuranceCost() {
+            return insuranceCost;
+        }
+
+        public int getInsuranceNumber() {
+            return insuranceNumber;
+        }
+
+    }
+    final static String DATE_FORMAT = "dd-MM-yyyy";
+    public static boolean isDateValid(String date)
+    {
+        try {
+            DateFormat df = new SimpleDateFormat(DATE_FORMAT);
+            df.setLenient(false);
+            df.parse(date);
+            return true;
+        } catch (ParseException e) {
+            return false;
+        }
+    }
+
 }
