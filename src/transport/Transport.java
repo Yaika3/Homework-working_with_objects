@@ -1,12 +1,49 @@
 package transport;
 
-public class Transport {
+public class Transport implements Competing{
+    public static String PIT_STOP = "Пит-стоп ";
+    public static String BEST_LAP_TIME= "Лучшее время круга";
+    public static String MAXIMUM_SPEED = "Максимальная скорость ";
+
     private String brand;
     private String model;
-    private final int year;
-    private final String country;
+    private double engineVolume;
+
+    public Transport(String brand, String model, double engineVolume) {
+    }
+    @Override
+    public void pitStop() {
+        System.out.println(PIT_STOP);
+    }
+
+    @Override
+    public void bestLapTime() {
+        System.out.println(BEST_LAP_TIME);
+
+    }
+
+    @Override
+    public void maximumSpeed() {
+        System.out.println(MAXIMUM_SPEED);
+
+    }
+
+
+    public double getEngineVolume() {
+        return engineVolume;
+    }
+    public void startMoving(){
+        System.out.println("Начать движение");
+    }
+    public void stopMoving(){
+        System.out.println("Закончить движение");
+    }
+
+
+ private  int year;
+    private  String country;
     private String color;
-    private String maximumMovementSpeed;
+   private String maximumMovementSpeed;
 
 
     public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed) {
@@ -15,9 +52,9 @@ public class Transport {
         { this.brand = "default";
         }
         else this.brand = brand;
-        this.model = model;
+       this.model = model;
         if ( this.model == null||model.isEmpty())
-        { this.model = "default";
+       { this.model = "default";
 
         }
         else this.model = model;
@@ -31,8 +68,8 @@ public class Transport {
         else this.color = color;
         maximumMovementSpeed = maximumMovementSpeed;
         if ( this.maximumMovementSpeed== null||country.isEmpty())
-        { this.maximumMovementSpeed = "default";
-        }
+       { this.maximumMovementSpeed = "default";
+       }
         else this.maximumMovementSpeed = maximumMovementSpeed;
     }
 
@@ -43,7 +80,6 @@ public class Transport {
     public String getModel() {
         return model;
     }
-
     public int getYear() {
         return year;
     }
@@ -66,9 +102,9 @@ public class Transport {
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
-                ", country='" + country + '\'' +
-                ", color='" + color + '\'' +
+               ", country='" + country + '\'' +
+               ", color='" + color + '\'' +
                 ", maximumMovementSpeed='" + maximumMovementSpeed + '\'' +
-                '}';
-    }
+               '}';
+  }
 }

@@ -4,7 +4,13 @@ import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
-public class Car extends Transport{
+public class Car extends Transport implements Competing{
+    public Car(String brand, String model, double engineVolume) {
+        super(brand, model, engineVolume);
+    }
+
+
+
 
 
     private double engineVolume;
@@ -17,63 +23,51 @@ public class Car extends Transport{
     private String numberOfSeats;
     boolean season;
     private String carTyre;
-    // Научился объеденять гетеры в 1 метод))))....по поводу final, если ставлю модификатор,то при проверке if не присваевае значение...можно добавить данные проверки в сетер.
-// единственное не понял как создать метод проверки номера...там же и буквы и цифры...какого типа переменная? и какие символы проверять? если по всей длине идти,
-    // метод Character.isDigit покажет что буквы не являются цифрами ?? запутался
-    //если по длинне строки идти, потом через if х000хх000 а дальше не понимаю
 
 
-    public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
+   public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
         super(brand, model, year, country, color, maximumMovementSpeed);
         this.season = season;
 
 
 
-        this.year = year;
-        if (this.year <= 0){
-            this.year = 2000;
-        }else this.year = year;
+       this.year = year;
+       if (this.year <= 0){
+           this.year = 2000;
+       }else this.year = year;
 
-        this.country= country;
+       this.country= country;
 
-        this.color = color;
-        if(this.color == null||color.isEmpty()){
-            this.color = " Белый цвет";
-        }else this.color = color;
+       this.color = color;
+       if(this.color == null||color.isEmpty()){
+           this.color = " Белый цвет";
+       }else this.color = color;
 
-        if (engineVolume <= 0){
-            this.engineVolume = 1.5;
-        }else this.engineVolume = engineVolume;
+       if (engineVolume <= 0){
+           this.engineVolume = 1.5;
+       }else this.engineVolume = engineVolume;
 
-        this.transmission=transmission;
-        if ( this.transmission == null||transmission.isEmpty())
-        { this.transmission = "default";
-        }
-        this.bodyType=bodyType;
-        if ( this.bodyType == null||bodyType.isEmpty())
-        { this.bodyType = "default";
-        }
-        this.registrationNumber = registrationNumber;
+       this.transmission=transmission;
+       if ( this.transmission == null||transmission.isEmpty())
+       { this.transmission = "default";
+       }
+       this.bodyType=bodyType;
+       if ( this.bodyType == null||bodyType.isEmpty())
+       { this.bodyType = "default";
+       }
+       this.registrationNumber = registrationNumber;
 
-     // Character.isDigit("х000хх000");
-        this.numberOfSeats=numberOfSeats;
-
-
-        if ( season== true){
-            this.carTyre="Летняя";
-        }
-        else {
-            this.carTyre= "Зимняя";
-        }
+     //  Character.isDigit("х000хх000");
+       this.numberOfSeats=numberOfSeats;
 
 
-
-
-    }
-
-
-
-
+       if ( season== true){
+           this.carTyre="Летняя";
+       }
+       else {
+           this.carTyre= "Зимняя";
+       }
+   }
 
     public double getEngineVolume() {
         return engineVolume;
@@ -81,21 +75,21 @@ public class Car extends Transport{
 
     public void setEngineVolume(double engineVolume) {
         this.engineVolume = engineVolume;
-    }
+   }
 
 
     public void setColor(String color) {
         this.color = color;
-    }
+   }
 
 
-    public void setYear(int year) {
+   public void setYear(int year) {
         this.year = year;
     }
 
 
     public void setCountry(String country) {
-        this.country = country;
+       this.country = country;
     }
 
     public String getTransmission() {
@@ -127,7 +121,7 @@ public class Car extends Transport{
     }
 
     public void setNumberOfSeats(String numberOfSeats) {
-        this.numberOfSeats = numberOfSeats;
+       this.numberOfSeats = numberOfSeats;
     }
 
     public String getCarTyre() {
@@ -137,53 +131,47 @@ public class Car extends Transport{
     public void setCarTyre(String carTyre) {
         this.carTyre = carTyre;
     }
-
-    @Override
-    public String toString() {
-        return getBrand() + " " + getModel() + " " + getYear() + " " + getCountry()+ " " + getColor()+ " " + getEngineVolume()+ " " + getTransmission()+ " " + getBodyType()+ " " + getRegistrationNumber()+ " " + getNumberOfSeats()+ " " + getCarTyre();
-    }
     public static class Key {
       private String remoteEngineStart;
-      private String keylessAccess;
+     private String keylessAccess;
 
-        public Key(String remoteEngineStart, String keylessAccess) {
+      public Key(String remoteEngineStart, String keylessAccess) {
             this.remoteEngineStart = remoteEngineStart;
             this.keylessAccess = keylessAccess;
         }
 
         public String getRemoteEngineStart() {
-            return remoteEngineStart;
+           return remoteEngineStart;
         }
 
         public void setRemoteEngineStart(String remoteEngineStart) {
             this.remoteEngineStart = remoteEngineStart;
-            if ( this.remoteEngineStart == null||remoteEngineStart.isEmpty())
+           if ( this.remoteEngineStart == null||remoteEngineStart.isEmpty())
             { this.remoteEngineStart = "default";
-            }
+           }
 
 
         }
 
-        public String getKeylessAccess() {
+       public String getKeylessAccess() {
             return keylessAccess;
-        }
+       }
 
-        public void setKeylessAccess(String keylessAccess) {
-            this.keylessAccess = keylessAccess;
-            if ( this.keylessAccess == null||keylessAccess.isEmpty())
-            { this.keylessAccess = "default";
-            }
+      public void setKeylessAccess(String keylessAccess) {
+           this.keylessAccess = keylessAccess;
+           if ( this.keylessAccess == null||keylessAccess.isEmpty())
+           { this.keylessAccess = "default";
+           }
         }
     }
-    public static class Insurance {
-        // не понимаю как создать проверку для final так как даже через Alt Ins не дает выбора сетера,только гетер...
-        private final int insuranceCost;
-        private final int insuranceNumber;
+   public static class Insurance {
+       private final int insuranceCost;
+       private final int insuranceNumber;
 
 
 
         public Insurance(int insuranceCost, int insuranceNumber) {
-            this.insuranceCost = insuranceCost;
+           this.insuranceCost = insuranceCost;
             this.insuranceNumber = insuranceNumber;
         }
 
@@ -198,7 +186,7 @@ public class Car extends Transport{
     }
     final static String DATE_FORMAT = "dd-MM-yyyy";
     public static boolean isDateValid(String date)
-    {
+   {
         try {
             DateFormat df = new SimpleDateFormat(DATE_FORMAT);
             df.setLenient(false);
@@ -207,6 +195,10 @@ public class Car extends Transport{
         } catch (ParseException e) {
             return false;
         }
+    }
+    public String carCar(){
+        return "carcar";
+
     }
 
 }

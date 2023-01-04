@@ -6,12 +6,11 @@ public class Bus extends Transport{
   //      return getBrand() + " " + getModel() + " " + getYear() + " " + getCountry()+ " " + getColor()+ " ";
   //  }
 
-    public Bus(String brand, String model, int year, String country, String color, String maximumMovementSpeed) {
-        super(brand, model, year, country, color, maximumMovementSpeed);
-
-
-
-
+    public Bus(String brand, String model, double engineVolume) {
+        super(brand, model,engineVolume);
+    }
+    public  void busbus(){
+        System.out.println("Bus");
     }
 
 

@@ -1,5 +1,4 @@
-import transport.Bus;
-import transport.Car;
+import transport.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,12 +15,30 @@ public class Main {
         System.out.println(hyundaiAvante.toString());
         System.out.println(nulL.toString());
 
-        Bus lionsCoach = new Bus("MAN"," LionsCoach",2020,"Сборочный завод, Турция","Белый","180");
-        Bus neoplan = new Bus("Neoman","Neoplan ",2019,"Сборочный завод, Турция","Серый","170");
-        Bus volvoN = new Bus("Volvo ","Volvo 9500",2021,"Сборка в Германии","Синий","190");
+        Bus lionsCoach = new Bus("MAN"," LionsCoach",5.0);
+        Bus neoplan = new Bus("Neoman","Neoplan ",5.1);
+        Bus volvoN = new Bus("Volvo ","Volvo 9500",5.0);
         System.out.println(lionsCoach.toString());
         System.out.println(neoplan.toString());
         System.out.println(volvoN.toString());
+
+        Car audiA850LTDIQuattro1 = new Car("Audi ","A 850 LTDI quattro ",3.7);
+        Car bMWZ81 = new Car("BMW ","Z8",3.6);
+        Car audiR8 = new Car("Audi","R8 ",3.4);
+        Bus lionsCoach1 = new Bus("MAN ","LionsCoach ",5.0);
+        Bus neoplan1 = new Bus("Neoman ","neoplan ",5.1);
+        Bus volvoN1 = new Bus("Volvo ","volvoN ",5.0);
+        Truck ram = new Truck("Dodge ","Ram",6.2);
+        Truck raptor = new Truck("Ford ","Raptor",6.0);
+        Truck fmx500 = new Truck("VOLVO ", "FMX-500-10X4 ", 6.5);
+        audiA850LTDIQuattro.startMoving();
+        audiA850LTDIQuattro.startMoving();
+        ram.pitStop();
+        ram.maximumSpeed();
+        ram.bestLapTime();
+        CategoryBDriver <Car> alex = new CategoryBDriver("Alex JB","B "," 20");
+
+
 
 
     }
