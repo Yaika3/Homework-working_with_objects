@@ -12,7 +12,44 @@ public class Car extends Transport implements Competing{
 
 
 
+    public enum BodyType{
+        BODY_SEDAN("Седан"),
+        BODY_HATCHBACK("Хетчбек"),
+        BODY_COUPE("Купе"),
+        BODY_STATIONWAGON("Универсал"),
+        BODY_OFFROADCAR("Внедорожник"),
+        BODY_CROSSOVER("Кроссовер"),
+        BODY_PICKUP("Пикап"),
+        BODY_VAN("Фургон"),
+        BODY_MINIVAN("Минивэн");
 
+
+        private String bodyType;
+
+        public String getBodyType() {
+            return bodyType;
+        }
+
+        BodyType(String bodyType) {
+            this.bodyType = bodyType;
+        }
+        public static BodyType typebodyType(String bodyType){
+            System.out.println("Тип авто "+ bodyType);
+           for (BodyType bodyType1 : values()){
+               if (bodyType1.getBodyType().equals(bodyType)){
+                   return bodyType1;
+
+               }
+
+            }return null;
+        }
+
+
+        public String toString() {
+            return  " Тип кузова " + bodyType;
+
+        }
+    }
     private double engineVolume;
     private String color;
     private int year;
