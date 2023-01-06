@@ -46,7 +46,7 @@ public class Main {
         volvoN1.maximumSpeed();
         alex.go(audiR8);
         Johan.go(ram);
-        Piter.go(volvoN1);
+     //   Piter.go(volvoN1);
 
 
 

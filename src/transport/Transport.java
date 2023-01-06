@@ -107,4 +107,7 @@ public class Transport implements Competing{
                 ", maximumMovementSpeed='" + maximumMovementSpeed + '\'' +
                '}';
   }
+  public void PassDiagnostics() throws Exception {
+        throw new Exception("Ошибка");
+  }
 }
