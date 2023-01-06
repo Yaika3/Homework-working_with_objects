@@ -23,7 +23,7 @@ public class Main {
         System.out.println(volvoN.toString());
 
         Car audiA850LTDIQuattro1 = new Car("Audi ","A 850 LTDI quattro ",3.7);
-        Car bMWZ81 = new Car("BMW ","Z8",3.6);
+        Car bMWZ81 = new Car("","Z8",3.6);
         Car audiR8 = new Car("Audi","R8 ",3.4);
         Bus lionsCoach1 = new Bus("MAN ","LionsCoach ",5.0);
         Bus neoplan1 = new Bus("Neoman ","neoplan ",5.1);
@@ -46,7 +46,7 @@ public class Main {
         volvoN1.maximumSpeed();
         alex.go(audiR8);
         Johan.go(ram);
-     //   Piter.go(volvoN1);
+        Piter.go(volvoN1);
 
 
 

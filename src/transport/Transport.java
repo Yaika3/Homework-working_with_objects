@@ -1,8 +1,11 @@
 package transport;
 
-public class Transport implements Competing{
+import java.sql.Driver;
+import java.util.Date;
+
+public class Transport implements Competing {
     public static String PIT_STOP = "Пит-стоп ";
-    public static String BEST_LAP_TIME= "Лучшее время круга";
+    public static String BEST_LAP_TIME = "Лучшее время круга";
     public static String MAXIMUM_SPEED = "Максимальная скорость ";
 
     private String brand;
@@ -11,6 +14,7 @@ public class Transport implements Competing{
 
     public Transport(String brand, String model, double engineVolume) {
     }
+
     @Override
     public void pitStop() {
         System.out.println(PIT_STOP);
@@ -32,45 +36,43 @@ public class Transport implements Competing{
     public double getEngineVolume() {
         return engineVolume;
     }
-    public void startMoving(){
+
+    public void startMoving() {
         System.out.println("Начать движение");
     }
-    public void stopMoving(){
+
+    public void stopMoving() {
         System.out.println("Закончить движение");
     }
 
 
- private  int year;
-    private  String country;
+    private int year;
+    private String country;
     private String color;
-   private String maximumMovementSpeed;
+    private String maximumMovementSpeed;
 
 
     public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed) {
         this.brand = brand;
-        if ( this.brand == null|| brand.isEmpty())
-        { this.brand = "default";
-        }
-        else this.brand = brand;
-       this.model = model;
-        if ( this.model == null||model.isEmpty())
-       { this.model = "default";
+        if (this.brand == null || brand.isEmpty()) {
+            this.brand = "default";
+        } else this.brand = brand;
+        this.model = model;
+        if (this.model == null || model.isEmpty()) {
+            this.model = "default";
 
-        }
-        else this.model = model;
+        } else this.model = model;
         this.year = year;
 
         this.country = country;
         this.color = color;
-        if(this.color == null||color.isEmpty()){
+        if (this.color == null || color.isEmpty()) {
             this.color = " Белый цвет";
-        }
-        else this.color = color;
+        } else this.color = color;
         maximumMovementSpeed = maximumMovementSpeed;
-        if ( this.maximumMovementSpeed== null||country.isEmpty())
-       { this.maximumMovementSpeed = "default";
-       }
-        else this.maximumMovementSpeed = maximumMovementSpeed;
+        if (this.maximumMovementSpeed == null || country.isEmpty()) {
+            this.maximumMovementSpeed = "default";
+        } else this.maximumMovementSpeed = maximumMovementSpeed;
     }
 
     public String getBrand() {
@@ -80,6 +82,7 @@ public class Transport implements Competing{
     public String getModel() {
         return model;
     }
+
     public int getYear() {
         return year;
     }
@@ -102,12 +105,16 @@ public class Transport implements Competing{
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", year=" + year +
-               ", country='" + country + '\'' +
-               ", color='" + color + '\'' +
+                ", country='" + country + '\'' +
+                ", color='" + color + '\'' +
                 ", maximumMovementSpeed='" + maximumMovementSpeed + '\'' +
-               '}';
-  }
-  public void PassDiagnostics() throws Exception {
-        throw new Exception("Ошибка");
-  }
+                '}';
+    }
+
+    public void PassDiagnostics() throws Exception {
+        if (brand.isEmpty())
+            throw new Exception("Ошибка");
+
+
+    }
 }
