@@ -5,11 +5,27 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Car extends Transport implements Competing{
+
     public Car(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
+
     }
 
 
+
+    @Override
+    public void pitStop() {
+        super.pitStop();
+        System.out.println("Car pitStop ");
+    }
+    public void bestLapTime(){
+        super.bestLapTime();
+        System.out.println("Car bestLapTime");
+    }
+    public void maximumSpeed(){
+        super.maximumSpeed();
+        System.out.println("Car maximumSpeed");
+    }
 
 
     public enum BodyType{
@@ -65,6 +81,7 @@ public class Car extends Transport implements Competing{
    public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
         super(brand, model, year, country, color, maximumMovementSpeed);
         this.season = season;
+
 
 
 
@@ -233,9 +250,8 @@ public class Car extends Transport implements Competing{
             return false;
         }
     }
-    public String carCar(){
-        return "carcar";
 
-    }
+
+
 
 }

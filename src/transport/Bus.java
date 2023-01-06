@@ -9,9 +9,20 @@ public class Bus extends Transport{
     public Bus(String brand, String model, double engineVolume) {
         super(brand, model,engineVolume);
     }
-    public  void busbus(){
-        System.out.println("Bus");
+    @Override
+    public void pitStop() {
+        super.pitStop();
+        System.out.println("Bus pitStop ");
     }
+    public void bestLapTime(){
+        super.bestLapTime();
+        System.out.println("Bus bestLapTime");
+    }
+    public void maximumSpeed(){
+        super.maximumSpeed();
+        System.out.println("Bus maximumSpeed");
+    }
+
 
 
 

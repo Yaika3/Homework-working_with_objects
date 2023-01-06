@@ -32,11 +32,24 @@ public class Main {
         Truck raptor = new Truck("Ford ","Raptor",6.0);
         Truck fmx500 = new Truck("VOLVO ", "FMX-500-10X4 ", 6.5);
         audiA850LTDIQuattro.startMoving();
-        audiA850LTDIQuattro.startMoving();
         ram.pitStop();
         ram.maximumSpeed();
         ram.bestLapTime();
         CategoryBDriver <Car> alex = new CategoryBDriver("Alex JB","B "," 20");
+        CategoryCDriver <Truck> Johan = new CategoryCDriver("Johan AF","C","10");
+        CategoryDDriver <Bus> Piter = new CategoryDDriver("Piter PP","D","14");
+        audiR8.pitStop();
+        audiR8.bestLapTime();
+        audiR8.maximumSpeed();
+        volvoN1.pitStop();
+        volvoN1.bestLapTime();
+        volvoN1.maximumSpeed();
+        alex.go(audiR8);
+        Johan.go(ram);
+        Piter.go(volvoN1);
+
+
+
 
 
 

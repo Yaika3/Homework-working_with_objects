@@ -29,6 +29,19 @@ public class Truck extends Transport {
             this.loadCapacity = loadCapacity;
         }
     }
+    @Override
+    public void pitStop() {
+        super.pitStop();
+        System.out.println("Truck pitStop ");
+    }
+    public void bestLapTime(){
+        super.bestLapTime();
+        System.out.println("Truck bestLapTime");
+    }
+    public void maximumSpeed(){
+        super.maximumSpeed();
+        System.out.println("Truck maximumSpeed");
+    }
 
 
 }
