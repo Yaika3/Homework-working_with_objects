@@ -1,6 +1,6 @@
 package transport;
 
-public class Driver  implements Competing {
+public class Driver <T extends Transport & Competing> {
     String fullName;
     String driversLicense;
     String experience;
@@ -11,18 +11,12 @@ public class Driver  implements Competing {
         this.experience = experience;
     }
 
-    @Override
     public void pitStop() {
-
     }
 
-    @Override
     public void bestLapTime() {
-
     }
 
-    @Override
     public void maximumSpeed() {
-
     }
 }

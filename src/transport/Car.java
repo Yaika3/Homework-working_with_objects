@@ -85,6 +85,7 @@ public class Car extends Transport implements Competing{
 
 
 
+
        this.year = year;
        if (this.year <= 0){
            this.year = 2000;

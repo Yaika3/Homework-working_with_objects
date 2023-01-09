@@ -1,12 +1,12 @@
 package transport;
 
-public class CategoryBDriver <B extends Car & Competing> {
-    public CategoryBDriver( String fullName, String driversLicense, String experience) {
-
+public class CategoryBDriver extends Driver<Car> {
+    public CategoryBDriver(String fullName, String driversLicense, String experience) {
+        super(fullName, driversLicense, experience);
     }
 
     public void go(Car car){
-        System.out.println("Driver "+ car.getBrand()+ " Go");
+        System.out.println("Driver "+car.getModel()+ " Go");
 
     }
 

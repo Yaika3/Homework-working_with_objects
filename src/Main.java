@@ -35,9 +35,9 @@ public class Main {
         ram.pitStop();
         ram.maximumSpeed();
         ram.bestLapTime();
-        CategoryBDriver <Car> alex = new CategoryBDriver("Alex JB","B "," 20");
-        CategoryCDriver <Truck> Johan = new CategoryCDriver("Johan AF","C","10");
-        CategoryDDriver <Bus> Piter = new CategoryDDriver("Piter PP","D","14");
+        CategoryBDriver alex = new CategoryBDriver("Alex JB","B "," 20");
+        CategoryCDriver Johan = new CategoryCDriver("Johan AF","C","10");
+        CategoryDDriver Piter = new CategoryDDriver("Piter PP","D","14");
         audiR8.pitStop();
         audiR8.bestLapTime();
         audiR8.maximumSpeed();
