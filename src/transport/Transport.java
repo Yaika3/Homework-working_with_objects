@@ -37,13 +37,6 @@ public class Transport implements Competing {
         return engineVolume;
     }
 
-    public void startMoving() {
-        System.out.println("Начать движение");
-    }
-
-    public void stopMoving() {
-        System.out.println("Закончить движение");
-    }
 
 
     private int year;
@@ -57,11 +50,11 @@ public class Transport implements Competing {
         if (this.brand == null || brand.isEmpty()) {
             this.brand = "default";
         } else this.brand = brand;
-        this.model = model;
+
         if (this.model == null || model.isEmpty()) {
             this.model = "default";
+        } else this.model = model;{}
 
-        } else this.model = model;
         this.year = year;
 
         this.country = country;
@@ -111,7 +104,7 @@ public class Transport implements Competing {
                 '}';
     }
 
-    public void PassDiagnostics() throws Exception {
+    public void passDiagnostics() throws Exception {
         if (brand.isEmpty())
             throw new Exception("Ошибка");
 

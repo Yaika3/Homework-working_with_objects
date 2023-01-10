@@ -9,5 +9,12 @@ public class CategoryDDriver extends Driver<Bus> {
         System.out.println("Driver "+ bus.getBrand()+ " Go");
 
     }
+    public void startMoving() {
+        System.out.println("Bus Начать движение");
+    }
+
+    public void stopMoving() {
+        System.out.println("Bus Закончить движение");
+    }
 
 }

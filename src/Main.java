@@ -31,7 +31,6 @@ public class Main {
         Truck ram = new Truck("Dodge ","Ram",6.2);
         Truck raptor = new Truck("Ford ","Raptor",6.0);
         Truck fmx500 = new Truck("VOLVO ", "FMX-500-10X4 ", 6.5);
-        audiA850LTDIQuattro.startMoving();
         ram.pitStop();
         ram.maximumSpeed();
         ram.bestLapTime();
@@ -47,6 +46,9 @@ public class Main {
         alex.go(audiR8);
         Johan.go(ram);
         Piter.go(volvoN1);
+        alex.startMoving();
+        Johan.startMoving();
+        Piter.startMoving();
 
 
 
