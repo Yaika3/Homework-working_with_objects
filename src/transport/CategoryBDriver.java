@@ -10,8 +10,8 @@ public class CategoryBDriver extends Driver<Car> {
     public void stopMoving() {
         System.out.println("Car Закончить движение");
     }
-    public void go(){
-        System.out.println("Driver "+ fullName +  " Go");
+    public void go(Car car){
+        System.out.println("Driver "+ car.getModel() + " Go");
 
     }
 

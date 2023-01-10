@@ -1,9 +1,9 @@
 package transport;
 
-public class Driver <T extends Transport & Competing> {
-    String fullName;
-    String driversLicense;
-    String experience;
+public abstract class Driver <T extends Transport & Competing> {
+   private String fullName;
+    private String driversLicense;
+    private String experience;
 
 
     public Driver(String fullName, String driversLicense, String experience) {
@@ -18,6 +18,18 @@ public class Driver <T extends Transport & Competing> {
     public void stopMoving() {
         System.out.println("Закончить движение");
     }
-    public void go(T tr){
+
+    public abstract void go(T t);
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getDriversLicense() {
+        return driversLicense;
+    }
+
+    public String getExperience() {
+        return experience;
     }
 }

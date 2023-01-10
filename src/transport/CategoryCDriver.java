@@ -6,8 +6,8 @@ public class CategoryCDriver extends Driver<Truck> {
         super(fullName, driversLicense, experience);
     }
 
-    public void go(Driver t){
-        System.out.println("водитель А управляет автомобилем Б и будет участвовать в заезде");
+    public void go(Truck truck){
+        System.out.println("Driver "+ truck.getModel() + " Go");
 
     }
     public void startMoving() {
