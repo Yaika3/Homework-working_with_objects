@@ -43,7 +43,7 @@ public class Main {
         volvoN1.bestLapTime();
         volvoN1.maximumSpeed();
         alex.go(audiR8);
-        Johan.go(ram);
+        Johan.go(raptor);
         Piter.go(volvoN1);
         alex.startMoving();
         Johan.startMoving();

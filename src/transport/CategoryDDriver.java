@@ -6,7 +6,7 @@ public class CategoryDDriver extends Driver<Bus> {
     }
 
     public void go(Bus bus){
-        System.out.println("Driver "+ bus.getBrand()+ " Go");
+        System.out.println("Driver "+ getFullName() +" "+ bus.getBrand()+ " Go");
 
     }
     public void startMoving() {

@@ -5,9 +5,14 @@ public class Bus extends Transport{
  //   public String toString() {
   //      return getBrand() + " " + getModel() + " " + getYear() + " " + getCountry()+ " " + getColor()+ " ";
   //  }
-
+private String brand;
+private String model;
+private double engineVolume;
     public Bus(String brand, String model, double engineVolume) {
-        super();
+        super(brand,model,engineVolume);
+        this.model=model;
+        this.brand=brand;
+        this.engineVolume=engineVolume;
     }
 
     @Override

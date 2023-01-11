@@ -1,15 +1,25 @@
 package transport;
 
 public class Truck extends Transport {
+    private String brand;
+    private String model;
+    private double engineVolume;
 
 
 
     public Truck(String brand, String model, double engineVolume) {
-        super();
-
-
+        super(brand,model,engineVolume);
+        this.brand=brand;
+        this.model=model;
+        this.engineVolume=engineVolume;
 
     }
+
+    @Override
+    public String getModel() {
+        return model;
+    }
+
     public enum TransportType{
      //   TRANSPORT_TYPE("Truck");
     }

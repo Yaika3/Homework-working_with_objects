@@ -11,7 +11,7 @@ public class CategoryBDriver extends Driver<Car> {
         System.out.println("Car Закончить движение");
     }
     public void go(Car car){
-        System.out.println("Driver "+ car.getModel() + " Go");
+        System.out.println("Driver "+getFullName() +" "+ car.getModel() + " Go");
 
     }
 

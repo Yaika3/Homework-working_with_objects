@@ -16,15 +16,15 @@ public class Transport implements Competing {
     private String maximumMovementSpeed;
 
 
-    public Transport() {
+    public Transport(String brand, String model, double engineVolume) {
         this.brand = brand;
         if (this.brand == null || brand.isEmpty()) {
             this.brand = "default";
         } else this.brand = brand;
 
-        if (model == null || model.isEmpty()) {
-            model = "default";
-        } else model = model;{}
+        if (this.model == null || model.isEmpty()) {
+            this.model = "default";
+        } else this.model = model;{}
 
         this.year = year;
 
@@ -41,6 +41,9 @@ public class Transport implements Competing {
     }
 
     public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
+        this.brand =brand;
+        this.model=model;
+        this.year =year;
     }
 
 

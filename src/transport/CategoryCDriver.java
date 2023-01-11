@@ -7,7 +7,7 @@ public class CategoryCDriver extends Driver<Truck> {
     }
 
     public void go(Truck truck){
-        System.out.println("Driver "+ truck.getModel() + " Go");
+        System.out.println("Driver "+getFullName() +" "+ truck.getModel() + " Go");
 
     }
     public void startMoving() {
