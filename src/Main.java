@@ -5,12 +5,12 @@ import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-        Car ladaGranta = new Car(""," Granta",2015,"сборка в России","желтого цвета","300",1.7,"автоматическая коробка передач","sedan","м101мм","4","Летняя");
-        Car audiA850LTDIQuattro = new Car("Audi "," A 8 50 L TDI quattro ",2020,"сборка в Германии","черный цвет","300",3.7,"автоматическая коробка передач","sedan","м104мм","Летняя","Летняя");
-        Car bMWZ8 = new Car("BMW ","Z8 ",2021,"сборка в Германии","черный цвет","320",3.0,"автоматическая коробка передач","sedan","м102мм","4","Летняя");
-        Car kiaSportage = new Car("Kia","Sportage", 2018,"сборка в Южной Корее","цвет кузова — красный","300",2.4,"автоматическая коробка передач","sedan","м103мм","4","Летняя");
-        Car hyundaiAvante = new Car("Hyundai "," Avante",2016,"сборка в Южной Корее","цвет кузова — оранжевый","300",1.3,"автоматическая коробка передач","sedan","м105мм","4","Летняя");
-        Car nulL = new Car(null,null,2000,"сборка в Южной Корее",null,"300",-1.3,"автоматическая коробка передач","sedan","м107мм","4","Летняя");
+        Car ladaGranta = new Car(""," Granta",2015,"сборка в России","желтого цвета","300",1.7,"автоматическая коробка передач","sedan","м101мм","4","Летняя","1");
+        Car audiA850LTDIQuattro = new Car("Audi "," A 8 50 L TDI quattro ",2020,"сборка в Германии","черный цвет","300",3.7,"автоматическая коробка передач","sedan","м104мм","Летняя","Летняя","1");
+        Car bMWZ8 = new Car("BMW ","Z8 ",2021,"сборка в Германии","черный цвет","320",3.0,"автоматическая коробка передач","sedan","м102мм","4","Летняя","1");
+        Car kiaSportage = new Car("Kia","Sportage", 2018,"сборка в Южной Корее","цвет кузова — красный","300",2.4,"автоматическая коробка передач","sedan","м103мм","4","Летняя","1");
+        Car hyundaiAvante = new Car("Hyundai "," Avante",2016,"сборка в Южной Корее","цвет кузова — оранжевый","300",1.3,"автоматическая коробка передач","sedan","м105мм","4","Летняя","1");
+        Car nulL = new Car(null,null,2000,"сборка в Южной Корее",null,"300",-1.3,"автоматическая коробка передач","sedan","м107мм","4","Летняя","1");
         System.out.println(ladaGranta.toString());
         System.out.println(audiA850LTDIQuattro.toString());
         System.out.println(bMWZ8.toString());
@@ -18,18 +18,18 @@ public class Main {
         System.out.println(hyundaiAvante.toString());
         System.out.println(nulL.toString());
 
-        Bus lionsCoach = new Bus("MAN"," LionsCoach",5.0);
-        Bus neoplan = new Bus("Neoman","Neoplan ",5.1);
-        Bus volvoN = new Bus("Volvo ","Volvo 9500",5.0);
+        Bus lionsCoach = new Bus("MAN"," LionsCoach",5.0,"1");
+        Bus neoplan = new Bus("Neoman","Neoplan ",5.1,"1");
+        Bus volvoN = new Bus("Volvo ","Volvo 9500",5.0,"1");
         System.out.println(lionsCoach.toString());
         System.out.println(neoplan.toString());
         System.out.println(volvoN.toString());
 
-        Car audiR8 = new Car("Audi","R8 ",2020,"Germany","White","300",3.4,"автоматическая коробка передач","sedan","м142мм","4","Летняя");
-        Bus volvoN1 = new Bus("Volvo ","volvoN ",5.0);
-        Truck ram = new Truck("Dodge ","Ram",6.2);
-        Truck raptor = new Truck("Ford ","Raptor",6.0);
-        Truck fmx500 = new Truck("VOLVO ", "FMX-500-10X4 ", 6.5);
+        Car audiR8 = new Car("Audi","R8 ",2020,"Germany","White","300",3.4,"автоматическая коробка передач","sedan","м142мм","4","Летняя","1");
+        Bus volvoN1 = new Bus("Volvo ","volvoN ",5.0,"1");
+        Truck ram = new Truck("Dodge ","Ram",6.2,"1");
+        Truck raptor = new Truck("Ford ","Raptor",6.0,"1");
+        Truck fmx500 = new Truck("VOLVO ", "FMX-500-10X4 ", 6.5,"1");
         ram.pitStop();
         ram.maximumSpeed();
         ram.bestLapTime();

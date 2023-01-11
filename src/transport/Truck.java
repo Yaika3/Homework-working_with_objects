@@ -4,15 +4,21 @@ public class Truck extends Transport {
     private String brand;
     private String model;
     private double engineVolume;
+    private String numberOfMechanics;
 
 
 
-    public Truck(String brand, String model, double engineVolume) {
-        super(brand,model,engineVolume);
+    public Truck(String brand, String model, double engineVolume,String numberOfMechanics) {
+        super(brand,model,engineVolume,numberOfMechanics);
         this.brand=brand;
         this.model=model;
         this.engineVolume=engineVolume;
+        this.numberOfMechanics =numberOfMechanics;
 
+    }
+
+    public String getNumberOfMechanics() {
+        return numberOfMechanics;
     }
 
     @Override

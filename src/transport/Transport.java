@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport implements Competing {
+public abstract class Transport implements Competing {
     public static String PIT_STOP = "Пит-стоп ";
     public static String BEST_LAP_TIME = "Лучшее время круга";
     public static String MAXIMUM_SPEED = "Максимальная скорость ";
@@ -16,7 +16,7 @@ public class Transport implements Competing {
     private String maximumMovementSpeed;
 
 
-    public Transport(String brand, String model, double engineVolume) {
+    public Transport(String brand, String model, double engineVolume,String numberOfMechanics) {
         this.brand = brand;
         if (this.brand == null || brand.isEmpty()) {
             this.brand = "default";
@@ -38,6 +38,7 @@ public class Transport implements Competing {
             this.maximumMovementSpeed = "default";
         } else this.maximumMovementSpeed = maximumMovementSpeed;
         this.engineVolume = engineVolume;
+        this.numberOfMechanics=numberOfMechanics;
     }
 
     public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
@@ -108,6 +109,7 @@ public class Transport implements Competing {
         System.out.println(MAXIMUM_SPEED);
 
     }
+
 
 
 }
