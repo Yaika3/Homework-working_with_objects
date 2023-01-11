@@ -6,12 +6,6 @@ import java.text.SimpleDateFormat;
 
 public class Car extends Transport implements Competing{
 
-    public Car(String brand, String model, double engineVolume) {
-        super(brand, model, engineVolume);
-
-    }
-
-
 
     @Override
     public void pitStop() {
@@ -78,15 +72,12 @@ public class Car extends Transport implements Competing{
     private String carTyre;
 
 
+
    public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
-        super(brand, model, year, country, color, maximumMovementSpeed);
-        this.season = season;
+        super(brand, model, year, country, color,maximumMovementSpeed,engineVolume,transmission,bodyType,registrationNumber,numberOfSeats,carTyre);
 
-
-
-
-
-       this.year = year;
+       this.season = season;
+        this.year = year;
        if (this.year <= 0){
            this.year = 2000;
        }else this.year = year;

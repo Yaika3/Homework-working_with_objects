@@ -1,5 +1,8 @@
 import transport.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         Car ladaGranta = new Car(""," Granta",2015,"сборка в России","желтого цвета","300",1.7,"автоматическая коробка передач","sedan","м101мм","4","Летняя");
@@ -22,11 +25,7 @@ public class Main {
         System.out.println(neoplan.toString());
         System.out.println(volvoN.toString());
 
-        Car audiA850LTDIQuattro1 = new Car("Audi ","A 850 LTDI quattro ",3.7);
-        Car bMWZ81 = new Car("","Z8",3.6);
-        Car audiR8 = new Car("Audi","R8 ",3.4);
-        Bus lionsCoach1 = new Bus("MAN ","LionsCoach ",5.0);
-        Bus neoplan1 = new Bus("Neoman ","neoplan ",5.1);
+        Car audiR8 = new Car("Audi","R8 ",2020,"Germany","White","300",3.4,"автоматическая коробка передач","sedan","м142мм","4","Летняя");
         Bus volvoN1 = new Bus("Volvo ","volvoN ",5.0);
         Truck ram = new Truck("Dodge ","Ram",6.2);
         Truck raptor = new Truck("Ford ","Raptor",6.0);
@@ -49,12 +48,31 @@ public class Main {
         alex.startMoving();
         Johan.startMoving();
         Piter.startMoving();
-
-
-
-
-
-
+        List<Transport> allCars = new ArrayList<>();
+        allCars.add(audiA850LTDIQuattro);
+        allCars.add(ladaGranta);
+        allCars.add(bMWZ8);
+        allCars.add(kiaSportage);
+        allCars.add(hyundaiAvante);
+        allCars.add(lionsCoach);
+        allCars.add(neoplan);
+        allCars.add(volvoN);
+        allCars.add(audiR8);
+        allCars.add(ram);
+        allCars.add(raptor);
+        allCars.add(fmx500);
+        System.out.println(allCars);
+        Mechanics Oleg = new Mechanics("Oleg Popov","Leto");
+        Mechanics Boris = new Mechanics<>("Boris Petrov","Zima");
+        Mechanics Elena = new Mechanics<>("Elena Nos","China");
+        List allMechanics = new ArrayList<>();
+        allMechanics.add(Oleg);
+        allMechanics.add(Boris);
+        allMechanics.add(Elena);
+        List allDriver = new ArrayList();
+        allDriver.add(alex);
+        allDriver.add(Johan);
+        allDriver.add(Piter);
 
 
 

@@ -1,8 +1,5 @@
 package transport;
 
-import java.sql.Driver;
-import java.util.Date;
-
 public class Transport implements Competing {
     public static String PIT_STOP = "Пит-стоп ";
     public static String BEST_LAP_TIME = "Лучшее время круга";
@@ -11,33 +8,7 @@ public class Transport implements Competing {
     private String brand;
     private String model;
     private double engineVolume;
-
-    public Transport(String brand, String model, double engineVolume) {
-    }
-
-    @Override
-    public void pitStop() {
-        System.out.println(PIT_STOP);
-    }
-
-    @Override
-    public void bestLapTime() {
-        System.out.println(BEST_LAP_TIME);
-
-    }
-
-    @Override
-    public void maximumSpeed() {
-        System.out.println(MAXIMUM_SPEED);
-
-    }
-
-
-    public double getEngineVolume() {
-        return engineVolume;
-    }
-
-
+    private String numberOfMechanics;
 
     private int year;
     private String country;
@@ -45,15 +16,15 @@ public class Transport implements Competing {
     private String maximumMovementSpeed;
 
 
-    public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed) {
+    public Transport() {
         this.brand = brand;
         if (this.brand == null || brand.isEmpty()) {
             this.brand = "default";
         } else this.brand = brand;
 
-        if (this.model == null || model.isEmpty()) {
-            this.model = "default";
-        } else this.model = model;{}
+        if (model == null || model.isEmpty()) {
+            model = "default";
+        } else model = model;{}
 
         this.year = year;
 
@@ -66,7 +37,13 @@ public class Transport implements Competing {
         if (this.maximumMovementSpeed == null || country.isEmpty()) {
             this.maximumMovementSpeed = "default";
         } else this.maximumMovementSpeed = maximumMovementSpeed;
+        this.engineVolume = engineVolume;
     }
+
+    public Transport(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre) {
+    }
+
+
 
     public String getBrand() {
         return brand;
@@ -92,6 +69,8 @@ public class Transport implements Competing {
         return maximumMovementSpeed;
     }
 
+    public double getEngineVolume() {return engineVolume;}
+
     @Override
     public String toString() {
         return "Transport{" +
@@ -110,4 +89,22 @@ public class Transport implements Competing {
 
 
     }
+    @Override
+    public void pitStop() {
+        System.out.println(PIT_STOP);
+    }
+
+    @Override
+    public void bestLapTime() {
+        System.out.println(BEST_LAP_TIME);
+
+    }
+
+    @Override
+    public void maximumSpeed() {
+        System.out.println(MAXIMUM_SPEED);
+
+    }
+
+
 }

@@ -3,17 +3,16 @@ package transport;
 public class Truck extends Transport {
 
 
+
     public Truck(String brand, String model, double engineVolume) {
-        super(brand, model, engineVolume);
+        super();
+
+
+
     }
     public enum TransportType{
      //   TRANSPORT_TYPE("Truck");
-
-
     }
-
-
-
     public enum  LoadCapacity {
         LOAD_CAPACITY_N1(3.5),
       //  LOAD_CAPACITY_N2[3.5, 12];
@@ -27,6 +26,9 @@ public class Truck extends Transport {
 
         LoadCapacity(double loadCapacity) {
             this.loadCapacity = loadCapacity;
+
+
+
         }
     }
     @Override
