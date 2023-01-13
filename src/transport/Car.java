@@ -5,23 +5,16 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 public class Car extends Transport implements Competing{
-
-
     @Override
     public void pitStop() {
         super.pitStop();
-        System.out.println("Car pitStop ");
-    }
+        System.out.println("Car pitStop ");}
     public void bestLapTime(){
         super.bestLapTime();
-        System.out.println("Car bestLapTime");
-    }
+        System.out.println("Car bestLapTime");}
     public void maximumSpeed(){
         super.maximumSpeed();
-        System.out.println("Car maximumSpeed");
-    }
-
-
+        System.out.println("Car maximumSpeed");}
     public enum BodyType{
         BODY_SEDAN("Седан"),
         BODY_HATCHBACK("Хетчбек"),
@@ -32,14 +25,10 @@ public class Car extends Transport implements Competing{
         BODY_PICKUP("Пикап"),
         BODY_VAN("Фургон"),
         BODY_MINIVAN("Минивэн");
-
-
         private String bodyType;
-
         public String getBodyType() {
             return bodyType;
         }
-
         BodyType(String bodyType) {
             this.bodyType = bodyType;
         }
@@ -48,16 +37,13 @@ public class Car extends Transport implements Competing{
            for (BodyType bodyType1 : values()){
                if (bodyType1.getBodyType().equals(bodyType)){
                    return bodyType1;
-
                }
 
-            }return null;
+           }return null;
         }
-
 
         public String toString() {
             return  " Тип кузова " + bodyType;
-
         }
     }
     private double engineVolume;
@@ -71,26 +57,19 @@ public class Car extends Transport implements Competing{
     boolean season;
     private String carTyre;
     private String numberOfMechanics;
-
-
-
-
     public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre,String numberOfMechanics) {
         super(brand, model, year, country, color,maximumMovementSpeed,engineVolume,transmission,bodyType,registrationNumber,numberOfSeats,carTyre);
 
-       this.season = season;
+        this.season = season;
         this.year = year;
        if (this.year <= 0){
            this.year = 2000;
        }else this.year = year;
-
        this.country= country;
-
        this.color = color;
        if(this.color == null||color.isEmpty()){
            this.color = " Белый цвет";
        }else this.color = color;
-
        if (engineVolume <= 0){
            this.engineVolume = 1.5;
        }else this.engineVolume = engineVolume;
@@ -108,15 +87,13 @@ public class Car extends Transport implements Competing{
      //  Character.isDigit("х000хх000");
        this.numberOfSeats=numberOfSeats;
 
-
        if ( season== true){
            this.carTyre="Летняя";
        }
        else {
            this.carTyre= "Зимняя";
        }
-       this.numberOfMechanics=numberOfMechanics;
-   }
+       this.numberOfMechanics=numberOfMechanics;}
 
     public double getEngineVolume() {
         return engineVolume;
@@ -126,16 +103,13 @@ public class Car extends Transport implements Competing{
         this.engineVolume = engineVolume;
    }
 
-
     public void setColor(String color) {
         this.color = color;
    }
 
-
-   public void setYear(int year) {
+    public void setYear(int year) {
         this.year = year;
     }
-
 
     public void setCountry(String country) {
        this.country = country;
@@ -180,14 +154,14 @@ public class Car extends Transport implements Competing{
     public void setCarTyre(String carTyre) {
         this.carTyre = carTyre;
     }
-    public static class Key {
-      private String remoteEngineStart;
-     private String keylessAccess;
 
-      public Key(String remoteEngineStart, String keylessAccess) {
+    public static class Key {
+        private String remoteEngineStart;
+        private String keylessAccess;
+
+        public Key(String remoteEngineStart, String keylessAccess) {
             this.remoteEngineStart = remoteEngineStart;
-            this.keylessAccess = keylessAccess;
-        }
+            this.keylessAccess = keylessAccess;}
 
         public String getRemoteEngineStart() {
            return remoteEngineStart;
@@ -196,30 +170,24 @@ public class Car extends Transport implements Competing{
         public void setRemoteEngineStart(String remoteEngineStart) {
             this.remoteEngineStart = remoteEngineStart;
            if ( this.remoteEngineStart == null||remoteEngineStart.isEmpty())
-            { this.remoteEngineStart = "default";
-           }
-
-
+            { this.remoteEngineStart = "default";}
         }
 
        public String getKeylessAccess() {
             return keylessAccess;
        }
 
-      public void setKeylessAccess(String keylessAccess) {
+       public void setKeylessAccess(String keylessAccess) {
            this.keylessAccess = keylessAccess;
            if ( this.keylessAccess == null||keylessAccess.isEmpty())
            { this.keylessAccess = "default";
-           }
-        }
+           }}
     }
    public static class Insurance {
        private final int insuranceCost;
        private final int insuranceNumber;
 
-
-
-        public Insurance(int insuranceCost, int insuranceNumber) {
+       public Insurance(int insuranceCost, int insuranceNumber) {
            this.insuranceCost = insuranceCost;
             this.insuranceNumber = insuranceNumber;
         }
@@ -227,13 +195,11 @@ public class Car extends Transport implements Competing{
         public int getInsuranceCost() {
             return insuranceCost;
         }
-
         public int getInsuranceNumber() {
             return insuranceNumber;
         }
 
-    }
-    final static String DATE_FORMAT = "dd-MM-yyyy";
+    }final static String DATE_FORMAT = "dd-MM-yyyy";
     public static boolean isDateValid(String date)
    {
         try {

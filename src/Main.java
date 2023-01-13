@@ -62,6 +62,7 @@ public class Main {
         allCars.add(raptor);
         allCars.add(fmx500);
         System.out.println(allCars);
+
         Mechanics Oleg = new Mechanics("Oleg Popov","Leto");
         Mechanics Boris = new Mechanics<>("Boris Petrov","Zima");
         Mechanics Elena = new Mechanics<>("Elena Nos","China");
@@ -73,6 +74,7 @@ public class Main {
         allDriver.add(alex);
         allDriver.add(Johan);
         allDriver.add(Piter);
+
 
 
 
