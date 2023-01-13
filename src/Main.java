@@ -63,17 +63,21 @@ public class Main {
         allCars.add(fmx500);
         System.out.println(allCars);
 
-        Mechanics Oleg = new Mechanics("Oleg Popov","Leto");
-        Mechanics Boris = new Mechanics<>("Boris Petrov","Zima");
-        Mechanics Elena = new Mechanics<>("Elena Nos","China");
+        Mechanics oleg = new Mechanics("Oleg Popov","Leto");
+        Mechanics boris = new Mechanics<>("Boris Petrov","Zima");
+        Mechanics elena = new Mechanics<>("Elena Nos","China");
         List allMechanics = new ArrayList<>();
-        allMechanics.add(Oleg);
-        allMechanics.add(Boris);
-        allMechanics.add(Elena);
+        allMechanics.add(oleg);
+        allMechanics.add(boris);
+        allMechanics.add(elena);
         List allDriver = new ArrayList();
         allDriver.add(alex);
         allDriver.add(Johan);
         allDriver.add(Piter);
+        boris.maintenance(audiR8);
+        oleg.maintenance(ram);
+        elena.maintenance(volvoN);
+
 
 
 

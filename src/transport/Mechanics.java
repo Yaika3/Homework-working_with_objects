@@ -25,8 +25,8 @@ public class Mechanics <M extends Transport> {
         this.company = company;
     }
 
-    public void maintenance(){
-        System.out.println("Выполнено ТО авто ");
+    public void maintenance(M Transport){
+        System.out.println(fullName + " " +"Выполнил ТО авто "+ Transport.getBrand() + " " + Transport.getModel());
     }
     public void fixTheCar(){
         System.out.println("Ремонт авто");
