@@ -32,5 +32,6 @@ public class Mechanics <M extends Transport> {
         System.out.println("Ремонт авто");
 
     }
+
 }
 

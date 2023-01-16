@@ -6,7 +6,7 @@ public class Truck extends Transport {
         super(brand,model,engineVolume,numberOfMechanics);}
 
     public String getNumberOfMechanics() {
-        return numberOfMechanics;}
+        return getNumberOfMechanics();}
     public String getModel() {
         return model;}
 

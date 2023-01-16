@@ -1,5 +1,8 @@
 package transport;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract class Transport implements Competing {
     public static String PIT_STOP = "Пит-стоп ";
     public static String BEST_LAP_TIME = "Лучшее время круга";
@@ -7,7 +10,7 @@ public abstract class Transport implements Competing {
     private String brand;
     String model;
     private double engineVolume;
-    String numberOfMechanics;
+    private String numberOfMechanics;
     private int year;
     private String country;
     private String color;
@@ -17,6 +20,8 @@ public abstract class Transport implements Competing {
     private String registrationNumber;
     private String numberOfSeats;
     private String carTyre;
+    List mechanics = new ArrayList<>();
+
     public Transport(String brand, String model, double engineVolume,String numberOfMechanics) {
         this.brand = brand;
         if (this.brand == null || brand.isEmpty()) {
@@ -44,6 +49,12 @@ public abstract class Transport implements Competing {
         this.numberOfSeats=numberOfSeats;
         this.carTyre=carTyre;
     }
+    public void addMechanics(Mechanics M){
+        mechanics.add(mechanics);
+
+
+
+    }
     public String getBrand() {
         return brand;}
     public String getModel() {
@@ -61,6 +72,10 @@ public abstract class Transport implements Competing {
     public String getMaximumMovementSpeed() {
         return maximumMovementSpeed;}
     public double getEngineVolume() {return engineVolume;}
+
+    public String getNumberOfMechanics() {
+        return numberOfMechanics;
+    }
 
     @Override
     public String toString() {

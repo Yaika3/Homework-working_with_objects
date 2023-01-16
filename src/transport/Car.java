@@ -56,7 +56,6 @@ public class Car extends Transport implements Competing{
     private String numberOfSeats;
     boolean season;
     private String carTyre;
-    private String numberOfMechanics;
     public Car(String brand, String model, int year, String country, String color, String maximumMovementSpeed, double engineVolume, String transmission, String bodyType, String registrationNumber, String numberOfSeats, String carTyre,String numberOfMechanics) {
         super(brand, model, year, country, color,maximumMovementSpeed,engineVolume,transmission,bodyType,registrationNumber,numberOfSeats,carTyre);
 
@@ -93,7 +92,7 @@ public class Car extends Transport implements Competing{
        else {
            this.carTyre= "Зимняя";
        }
-       this.numberOfMechanics=numberOfMechanics;}
+       }
 
     public double getEngineVolume() {
         return engineVolume;
