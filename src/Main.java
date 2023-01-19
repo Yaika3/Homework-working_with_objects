@@ -77,7 +77,9 @@ public class Main {
         boris.maintenance(audiR8);
         oleg.maintenance(ram);
         elena.maintenance(volvoN);
-        ram.addMechanics(oleg);
+//        ram.addMechanics(oleg);
+
+
 
 
 

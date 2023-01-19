@@ -1,7 +1,9 @@
 package transport;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public abstract class Transport implements Competing {
     public static String PIT_STOP = "Пит-стоп ";
@@ -20,7 +22,8 @@ public abstract class Transport implements Competing {
     private String registrationNumber;
     private String numberOfSeats;
     private String carTyre;
-    private List mechanics = new ArrayList<>();
+   // private List mechanics = new ArrayList<>();
+    private Map<Transport,Mechanics> MapMechanic = new HashMap<>();
 
     public Transport(String brand, String model, double engineVolume,String numberOfMechanics) {
         this.brand = brand;
@@ -49,12 +52,13 @@ public abstract class Transport implements Competing {
         this.numberOfSeats=numberOfSeats;
         this.carTyre=carTyre;
     }
-    public void addMechanics(Mechanics mechanic){
-        mechanics.add(mechanic);
-
-
-
+//    public void addMechanics(Mechanics mechanic){
+//        mechanics.add(mechanic);}
+    public void addMechanics(Map<Transport,Mechanics>map){
+        map.put(this.getModel(),);
     }
+
+
     public String getBrand() {
         return brand;}
     public String getModel() {
