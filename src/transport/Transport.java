@@ -20,7 +20,7 @@ public abstract class Transport implements Competing {
     private String registrationNumber;
     private String numberOfSeats;
     private String carTyre;
-    List mechanics = new ArrayList<>();
+    private List mechanics = new ArrayList<>();
 
     public Transport(String brand, String model, double engineVolume,String numberOfMechanics) {
         this.brand = brand;
@@ -49,8 +49,8 @@ public abstract class Transport implements Competing {
         this.numberOfSeats=numberOfSeats;
         this.carTyre=carTyre;
     }
-    public void addMechanics(Mechanics M){
-        mechanics.add(mechanics);
+    public void addMechanics(Mechanics mechanic){
+        mechanics.add(mechanic);
 
 
 
