@@ -23,7 +23,7 @@ public abstract class Transport implements Competing {
     private String numberOfSeats;
     private String carTyre;
    // private List mechanics = new ArrayList<>();
-    private Map<Transport,Mechanics> MapMechanic = new HashMap<>();
+
 
     public Transport(String brand, String model, double engineVolume,String numberOfMechanics) {
         this.brand = brand;
@@ -54,9 +54,6 @@ public abstract class Transport implements Competing {
     }
 //    public void addMechanics(Mechanics mechanic){
 //        mechanics.add(mechanic);}
-    public void addMechanics(Map<Transport,Mechanics>map){
-        map.put(this.getModel(),);
-    }
 
 
     public String getBrand() {

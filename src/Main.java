@@ -1,7 +1,9 @@
 import transport.*;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
@@ -78,6 +80,16 @@ public class Main {
         oleg.maintenance(ram);
         elena.maintenance(volvoN);
 //        ram.addMechanics(oleg);
+       Map<Car, CategoryCDriver> mapMechanic = new HashMap<>();
+       mapMechanic.put(audiR8,Johan);
+
+//        Map<Transport, Mechanics> mapMechanic = new HashMap<>();
+//        mapMechanic.put(audiR8,Johan);
+        System.out.println(mapMechanic);
+//        public static  void addMap(Map<Transport,Mechanics>){}
+
+
+
 
 
 
