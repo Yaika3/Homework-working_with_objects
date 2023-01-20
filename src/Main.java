@@ -1,9 +1,6 @@
 import transport.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -87,6 +84,21 @@ public class Main {
 //        mapMechanic.put(audiR8,Johan);
         System.out.println(mapMechanic);
 //        public static  void addMap(Map<Transport,Mechanics>){}
+
+       // ДЗ Коллекции. Set. Iterator
+
+//        Set<Mechanics> mechanicsSet = new HashSet<>();
+//        mechanicsSet.add();
+        Set<CategoryBDriver> mechanicsSet = new HashSet<>();
+        mechanicsSet.add(alex);
+        Set<CategoryCDriver> mechanicsSetCD = new HashSet<>();
+        mechanicsSetCD.add(Johan);
+        Set<CategoryDDriver> mechanicsSetDD = new HashSet<>();
+        mechanicsSetDD.add(Piter);
+        System.out.println(mechanicsSet);
+        System.out.println(mechanicsSetCD);
+        System.out.println(mechanicsSetDD);
+
 
 
 
