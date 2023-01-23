@@ -14,4 +14,5 @@ public class CategoryCDriver extends Driver<Truck> {
     public void stopMoving() {
         System.out.println("Truck Закончить движение");
     }
+
 }

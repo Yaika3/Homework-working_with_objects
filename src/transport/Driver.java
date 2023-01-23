@@ -25,4 +25,13 @@ public abstract class Driver <T extends Transport & Competing> {
     public String getExperience() {
         return experience;
     }
+
+    @Override
+    public String toString() {
+        return "Driver{" +
+                "fullName='" + fullName + '\'' +
+                ", driversLicense='" + driversLicense + '\'' +
+                ", experience='" + experience + '\'' +
+                '}';
+    }
 }

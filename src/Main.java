@@ -87,8 +87,6 @@ public class Main {
 
        // ДЗ Коллекции. Set. Iterator
 
-//        Set<Mechanics> mechanicsSet = new HashSet<>();
-//        mechanicsSet.add();
 //        Set<CategoryBDriver> mechanicsSet = new HashSet<>();
 //        mechanicsSet.add(alex);
 //        Set<CategoryCDriver> mechanicsSetCD = new HashSet<>();
@@ -98,6 +96,22 @@ public class Main {
 //        System.out.println(mechanicsSet);
 //        System.out.println(mechanicsSetCD);
 //        System.out.println(mechanicsSetDD);
+//        System.out.println("----------");
+//        Iterator <CategoryBDriver> iterator = mechanicsSet.iterator();
+//        while (iterator.hasNext()){
+//            System.out.println(iterator.next());
+//        }
+//        System.out.println("----------");
+        Set<Driver> driverSet = new HashSet<>();
+        driverSet.add(alex);
+        driverSet.add(Johan);
+        driverSet.add(Piter);
+        Iterator <Driver> iteratorDriver = driverSet.iterator();
+        while (iteratorDriver.hasNext()){
+            System.out.println(iteratorDriver.next());
+        }
+
+
 
 
 
