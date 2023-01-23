@@ -33,5 +33,12 @@ public class Mechanics <M extends Transport> {
 
     }
 
+    @Override
+    public String toString() {
+        return "Mechanics{" +
+                "fullName='" + fullName + '\'' +
+                ", company='" + company + '\'' +
+                '}';
+    }
 }
 

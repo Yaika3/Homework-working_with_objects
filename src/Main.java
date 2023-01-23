@@ -76,28 +76,28 @@ public class Main {
         boris.maintenance(audiR8);
         oleg.maintenance(ram);
         elena.maintenance(volvoN);
-//        ram.addMechanics(oleg);
        Map<Car, CategoryCDriver> mapMechanic = new HashMap<>();
        mapMechanic.put(audiR8,Johan);
+        System.out.println("---------");
 
-//        Map<Transport, Mechanics> mapMechanic = new HashMap<>();
-//        mapMechanic.put(audiR8,Johan);
-        System.out.println(mapMechanic);
+       Map<Transport, Mechanics> mapMechanicCar = new HashMap<>();
+        mapMechanicCar.put(audiR8,oleg);
+        System.out.println(mapMechanicCar);
 //        public static  void addMap(Map<Transport,Mechanics>){}
 
        // ДЗ Коллекции. Set. Iterator
 
 //        Set<Mechanics> mechanicsSet = new HashSet<>();
 //        mechanicsSet.add();
-        Set<CategoryBDriver> mechanicsSet = new HashSet<>();
-        mechanicsSet.add(alex);
-        Set<CategoryCDriver> mechanicsSetCD = new HashSet<>();
-        mechanicsSetCD.add(Johan);
-        Set<CategoryDDriver> mechanicsSetDD = new HashSet<>();
-        mechanicsSetDD.add(Piter);
-        System.out.println(mechanicsSet);
-        System.out.println(mechanicsSetCD);
-        System.out.println(mechanicsSetDD);
+//        Set<CategoryBDriver> mechanicsSet = new HashSet<>();
+//        mechanicsSet.add(alex);
+//        Set<CategoryCDriver> mechanicsSetCD = new HashSet<>();
+//        mechanicsSetCD.add(Johan);
+//        Set<CategoryDDriver> mechanicsSetDD = new HashSet<>();
+//        mechanicsSetDD.add(Piter);
+//        System.out.println(mechanicsSet);
+//        System.out.println(mechanicsSetCD);
+//        System.out.println(mechanicsSetDD);
 
 
 
